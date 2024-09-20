@@ -3,9 +3,9 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 if __name__ == '__main__':
-    n = 40
-    c_values = [x / 10 for x in range(2, 30, 2)]
-    t = 30
+    n = 300
+    c_values = [x / 10 for x in range(2, 32, 1)]
+    t = 3/4*n
     repeat_count = 500
     '''
     n = 4
@@ -25,7 +25,7 @@ if __name__ == '__main__':
     df = pd.DataFrame(data, columns=['c', 'percentage'])
     plt.plot(df['c'], df['percentage'])
     plt.xlabel('c')
-    plt.ylabel(f'Percentage of graphs (%), ({t} components)')
+    plt.ylabel(f'Percentage of graphs (%)')
     plt.title(f'Percentage of graphs with {n} nodes that have\nconnected groups of at least size {t} for different\naverage numbers of edges per node*')
     plt.figtext(0.5, 0.01, '* p=c/n so the average number of edges per node is c(n-1)/n=c-1/n', ha="center", fontsize=10)
     plt.subplots_adjust(top=0.85, bottom=0.15)
